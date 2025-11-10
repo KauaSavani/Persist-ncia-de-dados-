@@ -1,0 +1,291 @@
+type: collection.insomnia.rest/5.0
+name: persistência_de_dados
+meta:
+  id: wrk_f6301656beca4121a2fdff007efc3786
+  created: 1760363595345
+  modified: 1761564173113
+  description: ""
+collection:
+  - name: cliente
+    meta:
+      id: fld_366ae27c36fc4bce8d75d31ef71407d5
+      created: 1761587983206
+      modified: 1761587987291
+      sortKey: -1761587983206
+      description: ""
+    children:
+      - url: http://localhost:8081/cliente
+        name: Testes 409
+        meta:
+          id: req_340eb64f25d14a5fb63756fb38f701eb
+          created: 1761588085076
+          modified: 1762177749766
+          isPrivate: false
+          description: ""
+          sortKey: -1761588085076
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nomeCliente": "Romarinho",
+            	"cpfCliente": "77777777777"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/cliente
+        name: Criar novos usuários
+        meta:
+          id: req_f569e3fce1e04a6ea5309e1c8f3b679c
+          created: 1762174044376
+          modified: 1762177718198
+          isPrivate: false
+          description: ""
+          sortKey: -1762174044376
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nomeCliente": "Romarinho",
+            	"cpfCliente": "77777777777"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/cliente
+        name: Selecionar todos os clientes
+        meta:
+          id: req_662d045934584f8b86f109581e1eff8c
+          created: 1762190205934
+          modified: 1762190230277
+          isPrivate: false
+          description: ""
+          sortKey: -1762190205934
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/cliente?id=1
+        name: Selecionar por ID
+        meta:
+          id: req_cbd57e8494764cb8b8458c6d1cb71396
+          created: 1762196695161
+          modified: 1762774590815
+          isPrivate: false
+          description: ""
+          sortKey: -1762196695161
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: req_f569e3fce1e04a6ea5309e1c8f3b679chttp://localhost:8081/cliente/3
+        name: Excluir Cliente
+        meta:
+          id: req_fce93c4e22644fecac87699f96c18c6c
+          created: 1762196701376
+          modified: 1762774554120
+          isPrivate: false
+          description: ""
+          sortKey: -1762196701376
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/cliente/1
+        name: Edição
+        meta:
+          id: req_9febc19be9d741ae8603197c623278a9
+          created: 1762196703432
+          modified: 1762774710244
+          isPrivate: false
+          description: ""
+          sortKey: -1762196703432
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"":""
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: produto
+    meta:
+      id: fld_a4b050dcaa3a410a817558d42cb0d2dc
+      created: 1761587994004
+      modified: 1761587994004
+      sortKey: -1761587994004
+      description: ""
+    children:
+      - url: http://localhost:8081/produtos
+        name: My first request
+        meta:
+          id: req_60f80dfc49a942ff90be7d7bf722429c
+          created: 1760363595744
+          modified: 1761588064107
+          isPrivate: false
+          description: ""
+          sortKey: -1761588064060
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao" : "maça",
+            	"valor" : 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/produtos/1
+        name: New Request
+        meta:
+          id: req_a017df198da547a689093af044557ecf
+          created: 1761564614057
+          modified: 1761588074991
+          isPrivate: false
+          description: ""
+          sortKey: -1761588064160
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao" : "maça gala",
+            	"valor": 7.99
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/produtos
+        name: New Request
+        meta:
+          id: req_ab78a9e4ad544fbfa9a7db7ed81e2deb
+          created: 1761564628529
+          modified: 1761588077753
+          isPrivate: false
+          description: ""
+          sortKey: -1761588064260
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8081/produtos/5
+        name: New Request
+        meta:
+          id: req_fea2d1b3d61349adbaa60b57f2454737
+          created: 1761582002843
+          modified: 1761588079952
+          isPrivate: false
+          description: ""
+          sortKey: -1761588064360
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_3b2ee8a0b05b48e12aec26d6f54c59b59cff8062
+    created: 1760363595379
+    modified: 1760363595379
+environments:
+  name: Base Environment
+  meta:
+    id: env_3b2ee8a0b05b48e12aec26d6f54c59b59cff8062
+    created: 1760363595361
+    modified: 1760363595361
+    isPrivate: false
